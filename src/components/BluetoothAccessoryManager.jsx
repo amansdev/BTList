@@ -84,7 +84,7 @@ const BluetoothAccessoryManager = ({ maxAllowed = 9 }) => {
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      if (values.accessories.length !== 5) return;
+      if (values.accessories.length === 4) return;
       let res = values.accessories.map((accessory, index) => {
         const message = `Accessory #${index + 1}:
         - Type: ${accessory.type}
